@@ -16,8 +16,7 @@ class MyApp extends StatefulWidget {
   const MyApp({super.key}); // Constructor for MyApp
 
   @override
-  State<MyApp> createState() => _MyAppState(); // Creates the mutable state for the widget
-}
+  State<MyApp> createState() => _MyAppState(); 
 
 // State class for MyApp, which handles the app's theme switching logic
 class _MyAppState extends State<MyApp> {
