@@ -70,8 +70,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               children: Btn.buttonValues
                   .map(
                     (value) => SizedBox(
-                      width: screenSize.width / 4, // Button width (1/4th of the screen)
-                      height: screenSize.width / 5, // Button height proportional to width
+                      width: screenSize.width / 4, // Button width
+                      height: screenSize.width / 5, // Button height
                       child: buildButton(value), // Generate each button
                     ),
                   )
@@ -85,8 +85,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   // Function to build individual calculator buttons
   Widget buildButton(String value) {
-    Color btnColor = getBtnColor(value); // Determine button color based on type
-    bool isGrayButton = btnColor == const Color.fromARGB(255, 145, 145, 145); // Check for special buttons
+    Color btnColor = getBtnColor(value); // button color based on type
+    bool isGrayButton = btnColor == const Color.fromARGB(255, 145, 145, 145); // special buttons
 
     return Padding(
       padding: const EdgeInsets.all(8.0), // Add space between buttons
@@ -312,7 +312,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     );
   }
 
-  // Determine button color based on its type
+  // button color based on its type
   Color getBtnColor(String value) {
     return [Btn.del, Btn.clr].contains(value)
         ? const Color.fromARGB(255, 145, 145, 145) // color for clear and delete buttons
